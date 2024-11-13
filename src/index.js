@@ -1,4 +1,4 @@
-const request = require("express");
+const express = require("express");
 const path = require('path');
 const mysql = require('mysql');
 const myConnection = require('express-myconnection');
@@ -29,5 +29,5 @@ index.use(myConnection(mysql,{
 
 index.listen(index.get('port'),()=>{
     console.log('Conexion exitosa en el puerto',index.get('port'));
-    console.log('http://localhost:' + app.get('port')+'/login');
+    console.log('http://localhost:' + index.get('port')+'/login');
 })
